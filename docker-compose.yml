@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  # Next.js 前端
+  frontend:
+    image: next-blog-frontend:latest
+    container_name: blog-frontend
+    restart: always
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_BASE_URL: http://host.docker.internal:3001/api/v1  # 访问宿主机的后端服务
+    ports:
+      - '3000:3000'

@@ -46,14 +46,6 @@ export default function RootLayout({
                     上传文章
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/demo"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    API 演示
-                  </Link>
-                </li>
               </ul>
             </nav>
           </div>
