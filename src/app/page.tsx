@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import { getAllPosts } from '@/lib/posts';
+import Link from 'next/link'
+import { getAllPosts } from '@/lib/posts'
 
 // 强制动态渲染，不进行静态生成
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
 
 export default async function Home() {
-  const allPosts = await getAllPosts();
-  const latestPosts = allPosts.slice(0, 5); // 显示最新的5篇文章
+  const allPosts = await getAllPosts()
+  const latestPosts = allPosts.slice(0, 5) // 显示最新的5篇文章
 
   return (
-    <div className="space-y-8">
+    <div className="px-10">
       <section className="text-center py-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           欢迎来到我的博客
@@ -87,5 +87,5 @@ export default async function Home() {
         </div>
       )}
     </div>
-  );
+  )
 }
