@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
 
+// 强制动态渲染，不进行静态生成
+export const dynamic = 'force-dynamic';
+
 export default async function PostsPage() {
   const allPosts = await getAllPosts();
 

@@ -1,14 +1,14 @@
-import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import type { Post, PostMatter } from '@/types/post';
 import { markdownDocumentToPost } from '@/types/post';
 import { apiClient } from './api-client';
+import matter from 'gray-matter';
 
 // 从后端API获取所有文章
 export async function getAllPosts(): Promise<Post[]> {
   try {
-    const response = await apiClient.getAllMarkdowns({ limit: 100 }); // 获取前100篇文章
+    const response = await apiClient.getAllMarkdowns({ limit: 100 });
 
     if (!response.success || !response.data) {
       console.error('获取文章列表失败:', response.message);
