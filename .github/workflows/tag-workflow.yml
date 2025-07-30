@@ -39,8 +39,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t crpi-ooityr3jufudcukm.cn-shanghai.personal.cr.aliyuncs.com/next-blog:${{ github.event.inputs.tag_name }} .
+          docker build -t crpi-ooityr3jufudcukm.cn-shanghai.personal.cr.aliyuncs.com/swanqing_blog/next-blog:${{ github.event.inputs.tag_name }} .
 
       - name: Push Docker image
         run: |
-          docker push crpi-ooityr3jufudcukm.cn-shanghai.personal.cr.aliyuncs.com/next-blog:${{ github.event.inputs.tag_name }}
+          docker push crpi-ooityr3jufudcukm.cn-shanghai.personal.cr.aliyuncs.com/swanqing_blog/next-blog:${{ github.event.inputs.tag_name }}
