@@ -1,16 +1,14 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getPostBySlug, getAllSlugs, markdownToHtml } from '@/lib/posts';
+import { getPostBySlug, markdownToHtml } from '@/lib/posts';
 import type { Metadata } from 'next';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
+// 强制动态渲染，不进行静态生成
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
