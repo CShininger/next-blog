@@ -1,5 +1,8 @@
 name: Manual Tag and Docker Build/Push
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
     inputs:
