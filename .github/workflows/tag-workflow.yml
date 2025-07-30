@@ -32,7 +32,7 @@ jobs:
           git push origin "$TAG_NAME"
 
       - name: Log in to Docker registry
-        run: echo "${{ secrets.sxqhxd0534... }}" | docker login crpi-ooityr3jufudcukm.cn-shanghai.personal.cr.aliyuncs.com -u "${{ secrets.swanqing }}" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login crpi-ooityr3jufudcukm.cn-shanghai.personal.cr.aliyuncs.com -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build Docker image
         run: |
