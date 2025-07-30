@@ -8,6 +8,9 @@ export const metadata = {
   title: '丑小鹅的博客 - 前端技术学习',
   description: '丑小鹅的博客，总结学习前端技术时遇到的问题和解决方法',
   keywords: '丑小鹅, 前端博客, React, Next.js',
+  icons: {
+    icon: '/uxksjgiroi1232312_favicon.png',
+  },
   openGraph: {
     title: '丑小鹅的博客',
     description: '分享前端开发中遇到的问题和解决方法',

@@ -46,6 +46,8 @@ RUN mkdir -p ./public
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+# ✅ 关键：复制 public 目录
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
 # 切换到非 root 用户
 USER nextjs

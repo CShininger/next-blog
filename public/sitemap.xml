@@ -3,4 +3,13 @@
   <url>
     <loc>https://swanqing.com</loc>
   </url>
+  <url>
+    <loc>https://swanqing.com/posts</loc>
+  </url>
+  <url>
+    <loc>https://swanqing.com/auth/login</loc>
+  </url>
+  <url>
+    <loc>https://swanqing.com/auth/register</loc>
+  </url>
 </urlset>
